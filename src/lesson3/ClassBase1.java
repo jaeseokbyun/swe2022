@@ -5,10 +5,10 @@ public class ClassBase1 {
                      Constructor c = new Constructor();
                      System.out.println(c.getName());
                      System.out.println(c.getFriend(0));
-                     Constructor c1 = new Constructor("kiwan");
+                     Constructor c1 = new Constructor("jaeseok");
                      System.out.println(c1.getName());
                      System.out.println(c1.getFriend(0));
-                     Constructor c2 = new Constructor("kiwan", "maeng");
+                     Constructor c2 = new Constructor("jaeseok", "byun");
                      System.out.println(c2.getName());
                      System.out.println(c2.getFriend(0));
 

@@ -3,7 +3,7 @@ package lesson3;
 import java.util.ArrayList;
 
 public class Constructor {
-    final String firstName;
+     final String firstName;
      private final String lastName;
      private String seperator;
      private ArrayList<String> friends;
