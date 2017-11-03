@@ -7,6 +7,7 @@ public class Banker {
         Money money= req.getMoney();
         if (Banker.isMinimum_limit(money)) return false;
         return true
+        //this가 들어가면 method의 의미를 갖지만, 현재 this 필요 x
     }
     public static final  Money MINIMUM=new Money(Currency.Won,100);
     private static boolean isMinimum_limit(Money money) {

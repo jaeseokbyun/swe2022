@@ -31,6 +31,7 @@ public class Customer {
         return b.requestDepostit(new Deposit(this,
                 new Money(c,q),
                 new Account()
+                // this 필요==> method
         )
         )
     }
