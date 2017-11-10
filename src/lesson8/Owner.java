@@ -17,6 +17,10 @@ class Owner {
         result = new Owner(this.ownerValue,this.ownerBase.clone());
         return result;
     }
+
+    public Base getBase() {
+        return ownerBase;
+    }
 }
 
 
