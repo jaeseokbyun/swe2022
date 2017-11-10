@@ -13,6 +13,7 @@ public class List {
     }
     public void setName(String name) throws Exception{
         if (name == this. name) return;
+        // 복잡
         if(names.contains(name)) throw new Exception();
         names.remove(this.name);
         this.name=name;
