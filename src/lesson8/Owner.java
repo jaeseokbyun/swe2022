@@ -10,7 +10,7 @@ class Owner {
     // 값에 대해서는 private ,
     // 다 설명할 수 있어야 해.
     // break문은 유일한 예외...
-    // continue 문은 
+    // continue 문은 ddd
 }
 
 
