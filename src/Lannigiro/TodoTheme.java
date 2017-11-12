@@ -1,6 +1,6 @@
 package Lannigiro;
 import java.awt.*;
-//그림 여러개
+//그림 여러개/색/폰트
 public class TodoTheme {
     String color;
     String font;

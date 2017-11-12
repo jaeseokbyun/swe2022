@@ -6,10 +6,8 @@ import java.util.Collections ;
 public class TodoList extends TodoTask {
     //목록으로..
     static private ArrayList<String> Listnames= new ArrayList<>();
-    ArrayList<TodoTask> taskList=  new ArrayList<>();
     private int sorting=1;
     TodoTheme theme;
-    private String name;
 
     //생성자
     public TodoList(String name, Boolean result) {
@@ -20,7 +18,7 @@ public class TodoList extends TodoTask {
         this.Listnames.add(name);
     }
     public void SetListName(String name){
-        this.name=name;
+        this.TaskName=name;
     }
     public void DeleteList(String name){
         this.Listnames.remove(name);
@@ -42,6 +40,4 @@ public class TodoList extends TodoTask {
     public void changeSortDirection(int sorting) {
         this.sorting = sorting;
     }
-
-
     }
