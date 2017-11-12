@@ -13,7 +13,7 @@ public class List {
     }
     public void setName(String name) throws Exception{
         if (name == this. name) return;
-        // 복잡
+        // 복잡 ==> 중복 없어질 떄까지 refactoring 해야함.
         if(names.contains(name)) throw new Exception();
         names.remove(this.name);
         this.name=name;
