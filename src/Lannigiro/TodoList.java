@@ -1,20 +1,19 @@
 package Lannigiro;
-
+//이름 정렬방향
 import java.util.ArrayList ;
 import java.util.Collections ;
-import java.util.List;
 
 public class TodoList extends TodoTask {
     //목록으로..
     static private ArrayList<String> Listnames= new ArrayList<>();
 
-    //변수 설정
-    private String name;
-    private Boolean sorting;
+    private int sorting;
     TodoTheme theme;
+    private String name;
+
     //생성자
-    public TodoList(String name, String result) {
-        super(name,result);
+    public TodoList(String name, Boolean result) {
+        super(name, result);
 
     }
     public void AddList(String name){
@@ -27,20 +26,17 @@ public class TodoList extends TodoTask {
         this.Listnames.remove(name);
     }
 
-    public void SetTheme(String names){
+    public void SetTheme(){
         this.theme=new TodoTheme();
     }
 
-    public void ChangeTheme(String theme){
-
+    public void ChangeTheme(TodoTheme theme){
+        this.theme=theme;
     }
 
-    public void SortList(boolean sorting){
-        if (sorting==true){
+    public void SortList(int sorting){
+        if (sorting==1){
         Collections.sort(Listnames);
-        }
-        else{
-
         }
     }
 
