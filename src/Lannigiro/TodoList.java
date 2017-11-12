@@ -1,6 +1,8 @@
 package Lannigiro;
 
 import java.util.ArrayList ;
+import java.util.Collections ;
+import java.util.List;
 
 public class TodoList extends TodoTask {
     //목록으로..
@@ -35,7 +37,7 @@ public class TodoList extends TodoTask {
 
     public void SortList(boolean sorting){
         if (sorting==true){
-
+        Collections.sort(Listnames);
         }
         else{
 
