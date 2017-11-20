@@ -10,9 +10,9 @@ public class App {
     public void removeList(TodoList aList){
         mylists.remove(aList);
     }
-
-    public void addList(TodoList aList){
-        mylists.add(aList);
+    public void addList(String listName){
+        TodoList list1=new TodoList(listName);
+        mylists.add(list1);
     }
 
     }
