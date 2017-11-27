@@ -16,7 +16,7 @@ public class TodoTask {
     String taskInfo(){
         String name= this.getTaskName() ;
         LocalDate date= this.taskDueDate;
-        Boolean alarm=this.isAlarm();
+        Boolean alarm;
         Boolean completed=this.taskCompleted;
         String result= "# 할일명: " +name+" 완료 날짜: "+ date+ "\n  알림여부: " +alarm+ " 완료 여부 "+completed+"//";
         return result;
@@ -25,7 +25,10 @@ public class TodoTask {
         this.taskName=name;
         this.taskGeneratedDate=LocalDate.now();
     }
-
+    boolean alarm=false;
+    public void settingAlarm(){
+        this.alarm=true;
+    }
     public LocalDate getDueDate() {
         return this.taskDueDate;
     }
@@ -68,6 +71,7 @@ public class TodoTask {
             return true;
         else return false;
     }
+
     public static void main(String args[]){
         TodoTask test1= new TodoTask("aaa");
         test1.setFinishDate(2017,11,20);

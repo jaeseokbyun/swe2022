@@ -44,14 +44,12 @@ public class Main {
                 int year=Integer.parseInt(todoDate.split("\\.")[0]);
                 int month=Integer.parseInt(todoDate.split("\\..")[1]);
                 int date=Integer.parseInt(todoDate.split("\\.")[2]);
-                String todoAlarm1= casekey.substring(8,casekey.length()).split(",")[2];
-                if (todoAlarm1=="true"){
-                    boolean todoAlarm=true;
-                }
-                else {
-                    boolean todoAlarm = false;
-                }
+                String alarmdate2= casekey.substring(8,casekey.length()).split(",")[2];
+                int year2=Integer.parseInt(todoDate.split("\\.")[0]);
+                int month2=Integer.parseInt(todoDate.split("\\..")[1]);
+                int date2=Integer.parseInt(todoDate.split("\\.")[2]);
                 TodoTask atask= new TodoTask(todoTaskName);
+                atask.setAlarm(year2,month2,date2);
                 atask.setFinishDate(year,month,date);
                 k.addTask(atask);
                 k.listTaskInfo(); //문제 4
