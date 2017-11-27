@@ -16,7 +16,7 @@ public class TodoTask {
     String taskInfo(){
         String name= this.getTaskName() ;
         LocalDate date= this.taskDueDate;
-        Boolean alarm;
+        Boolean alarm=this.isAlarm();
         Boolean completed=this.taskCompleted;
         String result= "# 할일명: " +name+" 완료 날짜: "+ date+ "\n  알림여부: " +alarm+ " 완료 여부 "+completed+"//";
         return result;
