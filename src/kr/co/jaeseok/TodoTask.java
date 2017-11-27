@@ -9,10 +9,18 @@ public class TodoTask {
     private LocalDate taskDueDate;
     private LocalDate alarmDate;
     private final LocalDate taskGeneratedDate;
+
     public String getTaskName() {
         return this.taskName;
     }
-
+    String taskInfo(){
+        String name= this.getTaskName() ;
+        LocalDate date= this.taskDueDate;
+        Boolean alarm=this.isAlarm();
+        Boolean completed=this.taskCompleted;
+        String result= "# 할일명: " +name+" 완료 날짜: "+ date+ "\n  알림여부: " +alarm+ " 완료 여부 "+completed+"//";
+        return result;
+    }
     public TodoTask(String name){
         this.taskName=name;
         this.taskGeneratedDate=LocalDate.now();
@@ -31,6 +39,10 @@ public class TodoTask {
     void setTaskIsDone(){
         this.taskCompleted=true;
     }
+    void setTaskIsNotDone(){
+        this.taskCompleted=false;
+    }
+
     public boolean getTaskCompleted(){
         return this.taskCompleted;
     }
@@ -61,5 +73,6 @@ public class TodoTask {
         test1.setFinishDate(2017,11,20);
         test1.setAlarm(2017,11,20);
         System.out.println(test1.isAlarm());
+        System.out.println(test1.getTaskName());
     }
 }
