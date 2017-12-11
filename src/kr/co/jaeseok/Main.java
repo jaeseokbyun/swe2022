@@ -42,6 +42,10 @@ public class Main {
                 todoApp=todoApp.load();
                 todoApp.getInfo();
             }
+            else if(casekey.startsWith("save")){
+                todoApp.save();
+            }
+
             if (casekey.startsWith("addlist:")){
                 String new1= casekey.substring(8,casekey.length());
                 TodoList newlist1 = new TodoList(new1);
@@ -84,9 +88,6 @@ public class Main {
             }
             else if(casekey.startsWith("exit")) {
                  loopcontinue=true;
-            }
-            else if(casekey.startsWith("save")){
-                todoApp.save();
             }
 
         }
