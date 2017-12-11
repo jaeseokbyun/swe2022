@@ -1,6 +1,8 @@
 package kr.co.jaeseok;
 
-public class TodoTheme {
+import java.io.Serializable;
+
+public class TodoTheme implements Serializable {
      enum TodoThemeColor {BLUE, RED, PURPLE, GREEN, SKYBLUE}
      enum TodoThemeImage {MOUNTAIN,  BUSSTATION, HOUSE, AIRPLANE, TOWER, NOTHING}
 

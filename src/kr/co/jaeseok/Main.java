@@ -2,9 +2,12 @@ package kr.co.jaeseok;
 import java.util.Scanner;
 
 public class Main {
+
+
     public static void main(String arg[]) {
         String casekey;
         App todoApp = new App("jaeseok");
+
         TodoList list1 = new TodoList("집에서할일");
         TodoList list2 = new TodoList("학교숙제");
         TodoTask task1 = new TodoTask("java");
@@ -19,6 +22,15 @@ public class Main {
         list2.addTask(task5);
         todoApp.addList(list1);
         todoApp.addList(list2);
+        todoApp.getInfo();
+
+        App newapp= new App("yaya");
+        newapp.getInfo();
+
+        newapp =todoApp.load();
+        newapp.getInfo();
+
+
 
         todoApp.getInfo(); // 문제 1
         boolean loopcontinue=false;
@@ -26,6 +38,10 @@ public class Main {
         TodoList k=null;
         while (!loopcontinue){
             casekey = in.next();
+            if (casekey.startsWith("load")){   //처음에 시작할 때 저장한 값 불러들이려면 이것 구현하면 됌!
+                todoApp=todoApp.load();
+                todoApp.getInfo();
+            }
             if (casekey.startsWith("addlist:")){
                 String new1= casekey.substring(8,casekey.length());
                 TodoList newlist1 = new TodoList(new1);
@@ -69,6 +85,11 @@ public class Main {
             else if(casekey.startsWith("exit")) {
                  loopcontinue=true;
             }
+            else if(casekey.startsWith("save")){
+                todoApp.save();
+            }
 
+        }
 
-        }}}
+    }
+}

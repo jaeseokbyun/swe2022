@@ -1,5 +1,6 @@
 package kr.co.jaeseok;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
@@ -11,7 +12,7 @@ import static java.util.Comparator.naturalOrder;
 import static java.util.Comparator.nullsFirst;
 // deleteTask, setListName, setTheme, addTask, sorting
 // getListTheme, getListName,
-public class TodoList {
+public class TodoList implements Serializable{
     private ArrayList<TodoTask> taskList;
     private String listName;
     private TodoTheme listTheme;

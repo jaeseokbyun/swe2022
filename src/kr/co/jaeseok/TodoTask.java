@@ -1,9 +1,10 @@
 package kr.co.jaeseok;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 
-public class TodoTask {
+public class TodoTask implements Serializable {
     private String taskName;
     private boolean taskCompleted=false;
     private LocalDate taskDueDate;
